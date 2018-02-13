@@ -1,0 +1,21 @@
+{
+  "name": "film-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --watch public --watch routes --watch views --watch app.js ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-session": "^1.15.6",
+    "morgan": "~1.9.0",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
+}
