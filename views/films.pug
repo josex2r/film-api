@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .card-group
+    each film in films
+      .card(style='min-width: 250px')
+        img.card-img-top(src=film.image, alt='Card image cap')
+        .card-body
+          h5.card-title #{film.title}
+          p.card-text
+            | #{film.description}
+          a.btn.btn-primary(href='/films/' + film.id) Go to film
