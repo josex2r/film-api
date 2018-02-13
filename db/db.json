@@ -1,0 +1,28 @@
+{
+    "films": [{
+        "id": 1,
+        "name": "El gran showman",
+        "description": "P.T. Barnum (Hugh Jackman) fue un conocido showman y empresario circense de los Estados Unidos, también un autor, editor, filántropo e incluso político, que fundó el Ringling Brothers and Barnum & Bailey Circus, conocido como "El mayor espectáculo en la Tierra". Su mayor problema, junto con su gran tendencia a decir bromas de mal gusto que no eran del agrado de todo el mundo, era que Barnum sería mayormente conocido por sus célebres engaños en el mundo del entretenimiento. Concretamente en 1850 financiaría la gira de la cantante sueca Jenny Lind (Rebecca Ferguson), pagándole nada menos que 1.000 dólares por noche durante 150 noches. Eso sí, su habilidad e ingenio para embaucar a la gente hicieron que evitase la cárcel durante muchos años, y además sus éxitos le convirtieron en la primera personalidad millonaria del show business.",
+        "image": "https://i.ytimg.com/vi/Qz8DQTS7jZs/maxresdefault.jpg"
+    }, {
+        "id": 2,
+        "name": "Geostorm",
+        "description": "¿Qué pasaría si después de una década de devastadores fenómenos climaticos, finalmente se descubriera la forma de controlar a la madre naturaleza y la destrucción que causa? Cuando el catastrófico cambio climático amenaza la supervivencia de la vida en la Tierra, los gobiernos se unen para crear el Project Dutch Boy: una red global de satélites que rodean el planeta armados con tecnología de geoingeniería diseñada para evitar los desastres naturales. Después de haber protegido al planeta durante dos años, algo comienza a salir mal. Dos hermanos alejados (Gerard Butler y Jim Sturgess) tienen la tarea de resolver el desperfecto del programa antes de que una geo-tormenta se trague al mundo.",
+        "image": "http://www.geostorm.movie/img/content/Geostorm_Share.jpg"
+    }, {
+        "id": 3,
+        "name": "Jumanji: Bienvenidos a la jungla",
+        "description": "El misterioso y letal juego Jumanji reaparece más de veinte años después. Es la época actual, y cuatro adolescentes se introducen en esta nueva aventura, ahora a partir de un videojuego que sirve como un portal a través del espacio-tiempo. Absorbidos por el mundo de Jumanji, un juego que no se puede abandonar hasta que acaba la partida, los jóvenes se enfrentarán a rinocerontes, mambas negras y una infinita variedad de trampas de la selva. En este juego, el tímido Spencer será un conquistador musculoso, el deportista Fridge será un diminuto Einstein, la chica de moda Bethany será un profesor sabelotodo, y la torpe Martha, una guerrera amazona. Juntos tendrán que 'jugar' para volver al planeta Tierra y seguir con sus vidas. ¿Cómo? Pensando distinto.",
+        "image": "https://i.ytimg.com/vi/leIrosWRbYQ/maxresdefault.jpg"
+    }, {
+        "id": 4,
+        "name": "El otro guardaespaldas",
+        "description": "El prestigioso guardaespaldas Michael Bryce (Ryan Reynolds) recibe un nuevo cliente: un asesino a sueldo, Darius Kincaid (Samuel L. Jackson), que debe testificar en un juicio en La Haya contra un cruel dictador (Gary Oldman).",
+        "image": "http://i.imgur.com/T3yaXYI.jpg"
+    }],
+    "users": [{
+        "email": "aaaa@aaaa.com",
+        "password": "aaaa",
+        "isAdmin": true
+    }]
+}
