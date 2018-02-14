@@ -10,7 +10,7 @@ router.post('/login', (req, res) => {
     
     // Set 1h to expire
     if (remember) {
-        req.session.cookie.expires = new Date(Date.now() + 3600000);
+        req.sessionOptions.maxAge = 24 * 60 * 60 * 1000 // 24 hours
     }
     
     if (user) {

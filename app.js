@@ -4,7 +4,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const session = require('express-session');
+const cookieSession = require('cookie-session');
 
 // Load routes
 const index = require('./routes');
@@ -22,8 +22,10 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(session({
-  secret: 'film-api'
+app.use(cookieSession({
+  name: 'session',
+  keys: ['film-api'],
+  maxAge: 60 * 60 * 1000 // 1 hour
 }))
 app.use(express.static(path.join(__dirname, 'public')));
 
