@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  div.banner(style='background-image: url(' + film.image + ')')
+  section.jumbotron.text-center
+    .container
+      h1.jumbotron-heading #{film.name}
+      p.lead.text-muted
+        | #{film.description}

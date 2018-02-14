@@ -1,29 +1,49 @@
 const fs = require('fs');
-const throttle = require('lodash.throttle');
+const path = require('path');
 
 class DB {
     constructor() {
-        this._db = require('./db.json');
+        this.dbPath = path.join(__dirname, 'db.json');
+        this._db = JSON.parse(fs.readFileSync(this.dbPath, 'utf-8'));
+        console.log(this._db)
     }
     
     get(key) {
+        console.log(`get(${key})`);
         return this._db[key];
     }
     
-    set(key, value) {
-        this._db[key] = value;
-        // Write JSON file each 20s (only if this function has been called)
-        throttle(this.dumpMemory, 20000);
-    }
-    
-    dumpMemory() {
-        fs.writeFile('db.json', this._db, 'utf-8', (err) => {
+    _writeDB() {
+        console.log('_dumpMemory()');
+        fs.writeFile(this.dbPath, JSON.stringify(this._db), 'utf-8', (err) => {
             if (err) {
                 console.error('ERROR in "dumpMemory":', err);
             } else {
                 console.log('Memory has been successfully stored!');
             }
         });
+    }
+    
+    addFilm(film) {
+        if (!film.name || !film.description ||!film.image) {
+            throw new Error('All fields are required');
+        }
+        const films = this.get('films');
+        
+        film.id = Math.random().toString(26).slice(2);
+        films.push(film);
+        this._writeDB();
+    }
+    
+    deleteFilm(film) {
+        if (!film.id) {
+            throw new Error('No ID provided');
+        }
+        const films = this.get('films');
+        const index = films.findIndex((data) => data.id === film.id);
+
+        films.splice(index, 1);
+        this._writeDB();
     }
 }
 

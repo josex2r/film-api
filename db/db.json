@@ -1,28 +1,35 @@
 {
-    "films": [{
-        "id": 1,
-        "name": "El gran showman",
-        "description": "P.T. Barnum (Hugh Jackman) fue un conocido showman y empresario circense de los Estados Unidos, también un autor, editor, filántropo e incluso político, que fundó el Ringling Brothers and Barnum & Bailey Circus, conocido como \"El mayor espectáculo en la Tierra\".",
-        "image": "https://i.ytimg.com/vi/Qz8DQTS7jZs/maxresdefault.jpg"
-    }, {
-        "id": 2,
-        "name": "Geostorm",
-        "description": "¿Qué pasaría si después de una década de devastadores fenómenos climaticos, finalmente se descubriera la forma de controlar a la madre naturaleza y la destrucción que causa? Cuando el catastrófico cambio climático amenaza la supervivencia de la vida en la Tierra, los gobiernos se unen para crear el Project Dutch Boy.",
-        "image": "http://www.geostorm.movie/img/content/Geostorm_Share.jpg"
-    }, {
-        "id": 3,
-        "name": "Jumanji: Bienvenidos a la jungla",
-        "description": "El misterioso y letal juego Jumanji reaparece más de veinte años después. Es la época actual, y cuatro adolescentes se introducen en esta nueva aventura, ahora a partir de un videojuego que sirve como un portal a través del espacio-tiempo.",
-        "image": "https://i.ytimg.com/vi/leIrosWRbYQ/maxresdefault.jpg"
-    }, {
-        "id": 4,
-        "name": "El otro guardaespaldas",
-        "description": "El prestigioso guardaespaldas Michael Bryce (Ryan Reynolds) recibe un nuevo cliente: un asesino a sueldo, Darius Kincaid (Samuel L. Jackson), que debe testificar en un juicio en La Haya contra un cruel dictador (Gary Oldman).",
-        "image": "http://i.imgur.com/T3yaXYI.jpg"
-    }],
-    "users": [{
-        "email": "aaaa@aaaa.com",
-        "password": "aaaa",
-        "isAdmin": true
-    }]
+	"films": [
+		{
+			"id": "1",
+			"name": "El gran showman",
+			"description": "P.T. Barnum (Hugh Jackman) fue un conocido showman y empresario circense de los Estados Unidos, también un autor, editor, filántropo e incluso político, que fundó el Ringling Brothers and Barnum & Bailey Circus, conocido como \"El mayor espectáculo en la Tierra\".",
+			"image": "https://i.ytimg.com/vi/Qz8DQTS7jZs/maxresdefault.jpg"
+		},
+		{
+			"id": "2",
+			"name": "Geostorm",
+			"description": "¿Qué pasaría si después de una década de devastadores fenómenos climaticos, finalmente se descubriera la forma de controlar a la madre naturaleza y la destrucción que causa? Cuando el catastrófico cambio climático amenaza la supervivencia de la vida en la Tierra, los gobiernos se unen para crear el Project Dutch Boy.",
+			"image": "http://www.geostorm.movie/img/content/Geostorm_Share.jpg"
+		},
+		{
+			"id": "3",
+			"name": "Jumanji: Bienvenidos a la jungla",
+			"description": "El misterioso y letal juego Jumanji reaparece más de veinte años después. Es la época actual, y cuatro adolescentes se introducen en esta nueva aventura, ahora a partir de un videojuego que sirve como un portal a través del espacio-tiempo.",
+			"image": "https://i.ytimg.com/vi/leIrosWRbYQ/maxresdefault.jpg"
+		},
+		{
+			"id": "4",
+			"name": "El otro guardaespaldas",
+			"description": "El prestigioso guardaespaldas Michael Bryce (Ryan Reynolds) recibe un nuevo cliente: un asesino a sueldo, Darius Kincaid (Samuel L. Jackson), que debe testificar en un juicio en La Haya contra un cruel dictador (Gary Oldman).",
+			"image": "http://i.imgur.com/T3yaXYI.jpg"
+		}
+	],
+	"users": [
+		{
+			"email": "aaaa@aaaa.com",
+			"password": "aaaa",
+			"isAdmin": true
+		}
+	]
 }

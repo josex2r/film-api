@@ -4,7 +4,7 @@ const films = require('./films');
 const login = require('./login');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
     if (req.session.user) {
         res.redirect('/films');
     } else {

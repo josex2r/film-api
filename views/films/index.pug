@@ -1,0 +1,11 @@
+extends ../layout
+
+include ../mixins/film
+
+block content
+  if filmAdded
+    div.alert.alert-success(role='alert') La película ha sido creada!
+
+  .card-group
+    each film in films
+      +film(film, true)

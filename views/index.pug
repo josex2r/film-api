@@ -3,8 +3,10 @@ extends layout
 block content
   if error
     div.alert.alert-danger(role='alert') User not valid :(
+
   if logout
     div.alert.alert-success(role='alert') Logout completed!
+
   form.form-signin.text-center(method='post', action='login')
     img.mb-4(src='https://getbootstrap.com/assets/brand/bootstrap-solid.svg', alt='', width='72', height='72')
     h1.h3.mb-3.font-weight-normal Please sign in
@@ -17,4 +19,3 @@ block content
         input(type='checkbox', name='remember', value='true')
         |  Remember me
     button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
-    p.mt-5.mb-3.text-muted © 2017-2018

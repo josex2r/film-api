@@ -4,9 +4,14 @@ const database = require('../db');
 
 // Add auth middleware
 router.post('/login', (req, res) => {
-    const { email, password } = req.body;
+    const { email, password, remember } = req.body;
     const users = database.get('users');
     const user = users.find((user) => user.email === email && user.password === password);
+    
+    // Set 1h to expire
+    if (remember) {
+        req.session.cookie.expires = new Date(Date.now() + 3600000);
+    }
     
     if (user) {
         req.session.user = user;
