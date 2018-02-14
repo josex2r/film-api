@@ -5,7 +5,6 @@ class DB {
     constructor() {
         this.dbPath = path.join(__dirname, 'db.json');
         this._db = JSON.parse(fs.readFileSync(this.dbPath, 'utf-8'));
-        console.log(this._db)
     }
     
     get(key) {
@@ -35,12 +34,12 @@ class DB {
         this._writeDB();
     }
     
-    deleteFilm(film) {
-        if (!film.id) {
+    deleteFilm(id) {
+        if (!id) {
             throw new Error('No ID provided');
         }
         const films = this.get('films');
-        const index = films.findIndex((data) => data.id === film.id);
+        const index = films.findIndex((film) => film.id === id);
 
         films.splice(index, 1);
         this._writeDB();

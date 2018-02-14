@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
-const auth = require('../middlewares/auth');
+const auth = require('./middlewares/auth');
+const filmParam = require('./params/film');
 const database = require('../db');
 
 // Add auth middleware
-//router.use(auth);
+router.use(auth);
 
 // GET: List films
 router.get('/', (req, res, next) => {
@@ -53,15 +54,6 @@ router.get('/:film', (req, res, next) => {
 });
 
 // Parse film ID to append the film object to the request
-router.param('film', (req, res, next, filmId) => {
-    const film = database.get('films').find(({ id }) => id === filmId);
-    
-    if (film) {
-        req.film = film;
-        next();
-    } else {
-        res.sendStatus(404);
-    }
-});
+filmParam(router);
 
 module.exports = router;
