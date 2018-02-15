@@ -14,7 +14,9 @@ html
     .navbar.navbar-inverse.bg-inverse
       .container.d-flex.justify-content-between
         a.navbar-brand(href='/') Home
-        a.navbar-brand(href='/films/add') Añadir
+        if user
+          a.navbar-brand(href='/films/add') Añadir
+          a.navbar-brand(href='/logout') Logout
 
     .container
       block content
