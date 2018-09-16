@@ -1,7 +1,79 @@
+body {
+  background: #eee;
+}
+
+.navbar {
+  background: #607D8B;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 17px;
+}
+
 .banner {
     width: 100%;
     height: 350px;
     background-size: cover;
+}
+
+form {
+  padding: 25px 50px !important;
+  background: #fff;
+  margin: 50px auto;
+}
+
+.form-control {
+  margin-bottom: 25px;
+  height: 50px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0;
+}
+
+.checkbox {
+  text-align: left;
+}
+
+.alert {
+  margin-top: 25px;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+}
+
+.material-card {
+  flex: 300px;
+  margin: 15px;
+  background: #fff;
+  text-align: justify;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+}
+
+.jumbotron {
+  background: #fff;
+  padding: 25px;
+}
+
+.github-corner {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+footer {
+  margin-top: 25px;
 }
 
 .github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}

@@ -1,9 +1,9 @@
 mixin film(film, button)
-  .card(style='min-width: 250px')
+  .material-card
     img.card-img-top(src=film.image, alt='Card image cap')
     .card-body
       h5.card-title #{film.title}
       p.card-text
         | #{film.description}
       if button
-        a.btn.btn-primary(href='/films/' + film.id) Go to film
+        a.btn.btn-primary(href='/films/' + film.id) Ver más

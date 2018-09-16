@@ -1,15 +1,9 @@
 extends layout
 
 block content
-  if error
-    div.alert.alert-danger(role='alert') User not valid :(
 
-  if logout
-    div.alert.alert-success(role='alert') Logout completed!
-
-  form.form-signin.text-center(method='post', action='login')
-    img.mb-4(src='https://getbootstrap.com/assets/brand/bootstrap-solid.svg', alt='', width='72', height='72')
-    h1.h3.mb-3.font-weight-normal Please sign in
+  form.form-signin.text-center.col-sm-6.offset-sm-3(method='post', action='login')
+    h1.h3.mb-3.font-weight-normal Film API
     label.sr-only(for='inputEmail') Email address
     input#inputEmail.form-control(type='email', name='email', placeholder='Email address', required='required', autofocus='autofocus')
     label.sr-only(for='inputPassword') Password
@@ -19,3 +13,9 @@ block content
         input(type='checkbox', name='remember', value='true')
         |  Remember me
     button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+
+    if error
+      div.alert.alert-danger(role='alert') User not valid :(
+
+    if logout
+      div.alert.alert-success(role='alert') Logout completed!
