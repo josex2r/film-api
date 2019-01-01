@@ -6,3 +6,4 @@ automatic_scaling:
 
 env_variables:
   CALLBACK_URL: 'https://curso-nodejs-ed7.appspot.com/auth/google/callback'
+  NODE_ENV: 'production'

@@ -14,7 +14,6 @@ router.get('/auth/google',
 router.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/' }),
   (req, res) => {
-    console.log(req.user)
     req.session.passport = req.user;
     res.redirect('/films');
   }
