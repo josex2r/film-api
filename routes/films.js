@@ -2,16 +2,17 @@ var express = require('express');
 var router = express.Router();
 const auth = require('../middlewares/auth');
 const filmParam = require('./params/film');
-const database = require('../db');
+// const database = require('../lib/db');
+const database = require('../lib/datastore');
 
 // Add auth middleware
 router.use(auth);
 
 // GET: List films
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
     res.render('films/index', {
         title: 'Films',
-        films: database.get('films'),
+        films: await database.getFilms(),
         filmAdded: !!req.query.filmAdded
     });
 });
@@ -25,7 +26,7 @@ router.get('/add', (req, res, next) => {
 });
 
 // POST: Add new film
-router.post('/add', (req, res, next) => {
+router.post('/add', async (req, res, next) => {
     const film = req.body;
     const { name, description, image } = film;
     let error = '';
@@ -38,7 +39,7 @@ router.post('/add', (req, res, next) => {
             error
         });
     } else {
-        database.addFilm(film);
+        await database.addFilm(film);
         res.redirect('/films?filmAdded=true');
     }
 });

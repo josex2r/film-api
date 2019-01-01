@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const database = require('../db');
+const database = require('../lib/db');
 const passport = require('../lib/passport');
 
 router.use(passport.initialize());
@@ -21,9 +21,9 @@ router.get('/auth/google/callback',
 );
 
 // Add auth middleware
-router.post('/login', (req, res) => {
+router.post('/login', async (req, res) => {
     const { email, password, remember } = req.body;
-    const users = database.get('users');
+    const users = await database.get('users');
     const user = users.find((user) => user.email === email && user.password === password);
     
     // Set 1h to expire

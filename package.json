@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --watch public --watch routes --watch views --watch app.js --watch db/index.js ./bin/www"
+    "start": "nodemon --watch public --watch routes --watch views --watch app.js --watch lib ./bin/www"
   },
   "dependencies": {
+    "@google-cloud/datastore": "^2.0.0",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
     "cookie-session": "^2.0.0-beta.3",

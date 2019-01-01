@@ -1,13 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const filmParam = require('../params/film');
-const database = require('../../db');
+// const database = require('../../lib/db');
+const database = require('../../lib/datastore');
 
-router.get('/', (req, res) => {
-  res.status(200).json(database.get('films'));
+router.get('/', async(req, res) => {
+  const films = await database.getFilms();
+
+  res.status(200).json(films);
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   const film = req.body;
   const { name, description, image } = film;
   console.log(req.body)
@@ -16,7 +19,7 @@ router.post('/', (req, res) => {
       res.sendStatus(400);
   } else {
     try {
-      database.addFilm(req.body);
+      await database.addFilm(req.body);
       res.sendStatus(204);
     } catch(e) {
       res.sendStatus(404);
@@ -28,9 +31,9 @@ router.put('/', (req, res) => {
   res.sendStatus(405);
 });
 
-router.delete('/:film', (req, res) => {
+router.delete('/:film', async (req, res) => {
   try {
-    database.deleteFilm(req.film.id);
+    await database.deleteFilm(req.film.id);
     res.sendStatus(204);
   } catch(e) {
     res.sendStatus(404);
