@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const auth = require('./middlewares/auth');
+const auth = require('../middlewares/auth');
 const filmParam = require('./params/film');
 const database = require('../db');
 

@@ -14,7 +14,7 @@ html
     .navbar.navbar-inverse.bg-inverse
       .container.d-flex.justify-content-between
         a.navbar-brand(href='/') Home
-        if user
+        if passport
           a.navbar-brand(href='/films/add') Añadir
           a.navbar-brand(href='/logout') Logout
 
