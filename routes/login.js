@@ -18,27 +18,6 @@ router.get('/auth/google/callback',
     res.redirect('/films');
   }
 );
-
-// Add auth middleware
-router.post('/login', async (req, res) => {
-    const { email, password, remember } = req.body;
-    const users = await database.get('users');
-    const user = users.find((user) => user.email === email && user.password === password);
-    
-    // Set 1h to expire
-    if (remember) {
-        req.sessionOptions.maxAge = 24 * 60 * 60 * 1000 // 24 hours
-    }
-    
-    if (user) {
-        req.session.passport = {
-            nickname: user
-        };
-        res.redirect('/films');
-    } else {
-        res.redirect('/?error=true');
-    }
-});
  
 // Logout endpoint
 router.get('/logout', (req, res) => {

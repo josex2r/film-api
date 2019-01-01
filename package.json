@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "nodemon --watch public --watch routes --watch views --watch app.js --watch lib ./bin/www",
-    "start": "./bin/www"
+    "start": "./bin/www",
+    "deploy": "gcloud app deploy"
   },
   "dependencies": {
     "@google-cloud/datastore": "^2.0.0",
