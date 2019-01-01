@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --watch public --watch routes --watch views --watch app.js --watch lib ./bin/www"
+    "serve": "nodemon --watch public --watch routes --watch views --watch app.js --watch lib ./bin/www",
+    "start": "./bin/www"
   },
   "dependencies": {
     "@google-cloud/datastore": "^2.0.0",
