@@ -1,0 +1,7 @@
+indexes:
+  - kind: Film
+    ancestor: no
+    properties:
+      - name: _id
+      - name: name
+        direction: asc
