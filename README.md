@@ -15,6 +15,19 @@ npm install
 npm start
 ```
 
+## Configuración Google Cloud
+
+Rellena el fichero `.env` con los valores de de tu proyecto de Google Cloud:
+- `CLIENT_ID`: ID de cliente del proyecto Google
+- `CLIENT_SECRET`: Clave secreta del proyecto Google
+- `CALLBACK_URL`: URL para el callback de OAuth (ej. `http://localhost:8080/auth/google/callback`)
+- `PROJECT_ID`: ID del proyecto de Google
+- `GOOGLE_APPLICATION_CREDENTIALS`: JSON con la clave de servicio de Google, el fichero hay que crearlo y descargarlo desde la consola de Google Cloud (ej. `./curso-nodejs-ed7-c75b732c20ea.json`)
+
+## Despliegue en Google Cloud
+
+`npm run deploy`
+
 ## Contenido
 
 La aplicación contiene las siguientes rutas:
@@ -23,7 +36,7 @@ La aplicación contiene las siguientes rutas:
   - [`/`](routes/index.js):
     - Si la petición es un `GET`, muestra un formulario de login (email y contraseña) que envía un `POST` a `/login`.
     - Si el usuario ya está autenticado redirige a `/films`.
-  - [`/login`](routes/login.js):
+  - [`/auth/google`](routes/login.js):
     - Si la petición es un `POST`, comprueba si el usuario está en la base de datos ([](db/db.json)) y si es correcto crea una **coockie** y redirige a la ruta `/films`.
       En caso contrario redirige a `/` para mostrar el formulario con un mensaje de error.
     - [`/logout`](routes/login.js): Destruye la sesión y redirige a `/`
