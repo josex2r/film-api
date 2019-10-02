@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const filmParam = require('../params/film');
-const database = require('../../db');
+const database = require('../../lib/db');
 
 router.get('/', (req, res) => {
   res.status(200).json(database.get('films'));
@@ -11,7 +11,7 @@ router.post('/', (req, res) => {
   const film = req.body;
   const { name, description, image } = film;
   console.log(req.body)
-  
+
   if (!name || !description || !image) {
       res.sendStatus(400);
   } else {

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const auth = require('./middlewares/auth');
 const filmParam = require('./params/film');
-const database = require('../db');
+const database = require('../lib/db');
 
 // Add auth middleware
 router.use(auth);
@@ -29,7 +29,7 @@ router.post('/add', (req, res, next) => {
     const film = req.body;
     const { name, description, image } = film;
     let error = '';
-    
+
     if (!name || !description || !image) {
         error = 'Todos los campos son obligatorios';
         res.render('films/add', {
@@ -46,7 +46,7 @@ router.post('/add', (req, res, next) => {
 // GET: Show film
 router.get('/:film', (req, res, next) => {
     const film = req.film;
-    
+
     res.render('films/film', {
         title: film.name,
         film

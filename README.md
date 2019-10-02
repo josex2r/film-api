@@ -15,6 +15,14 @@ npm install
 npm start
 ```
 
+## Configuración Google Cloud
+
+Rellena el fichero `.env` con los valores de de tu proyecto de Google Cloud:
+- `CLIENT_ID`: ID de cliente del proyecto Google
+- `CLIENT_SECRET`: Clave secreta del proyecto Google
+- `CALLBACK_URL`: URL para el callback de OAuth (ej. `http://localhost:8080/auth/google/callback`)
+- `PROJECT_ID`: ID del proyecto de Google
+
 ## Contenido
 
 La aplicación contiene las siguientes rutas:
