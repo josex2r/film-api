@@ -4,11 +4,9 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const cookieSession = require('cookie-session');
 
 // Load routes
 const index = require('./routes');
-const api = require('./routes/api');
 
 const app = express();
 
@@ -22,15 +20,9 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(cookieSession({
-  name: 'session',
-  keys: ['film-api'],
-  maxAge: 60 * 60 * 1000 // 1 hour
-}))
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
