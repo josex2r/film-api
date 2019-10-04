@@ -1,7 +1,10 @@
 var express = require('express');
 const database = require('../lib/database');
+const filmParam = require('./params/film');
 
 var router = express.Router();
+
+filmParam(router);
 
 // GET: List films
 router.get('/', (req, res, next) => {
@@ -31,9 +34,11 @@ router.post('/add', (req, res, next) => {
 
 // GET: Show film
 router.get('/:film', (req, res, next) => {
+    const film = req.film;
+
     res.render('films/film', {
         title: film.name,
-        // film
+        film
     });
 });
 
