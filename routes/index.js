@@ -12,6 +12,11 @@ router.get('/', (req, res, next) => {
     });
 });
 
+router.get('/logout', (req, res) => {
+    req.session = null;
+    res.redirect('/');
+});
+
 router.post('/login', (req, res) => {
     // const email = req.body.email;
     // const password = req.body.password;
