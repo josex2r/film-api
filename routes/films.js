@@ -1,11 +1,13 @@
 var express = require('express');
+const database = require('../lib/database');
+
 var router = express.Router();
 
 // GET: List films
 router.get('/', (req, res, next) => {
     res.render('films/index', {
         title: 'Films',
-        // films,
+        films: database.get('films'),
         // filmAdded
     });
 });
