@@ -21,6 +21,7 @@ router.post('/login', (req, res) => {
     });
 
     if (user) {
+        req.session.user = user;
         res.redirect('/films');
     } else {
         res.redirect('/');
