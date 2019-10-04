@@ -5,7 +5,7 @@ include ../mixins/film
 block content
   if error
     div.alert.alert-danger(role='alert') #{error}
-  
+
   .row
     .col-sm-6
       h1.h3.mb-3.font-weight-normal Previsualización
@@ -15,13 +15,13 @@ block content
       form.form-signin.text-center(method='post', action='/films/add')
         h1.h3.mb-3.font-weight-normal Formulario
         label.sr-only(for='name') Nombre de la película
-        input#name.form-control(type='text', name='name', placeholder='Nombre', autofocus='autofocus', value=film.name)
+        input#name.form-control(type='text', name='title', placeholder='Nombre', autofocus='autofocus', value=film.title)
         label.sr-only(for='description') Password
         textarea#description.form-control(name='description', placeholder='Descripción', value=film.description)
         label.sr-only(for='image') Imagen de la película
         input#image.form-control(type='text', name='image', placeholder='Imagen', autofocus='autofocus', value=film.image)
         button.btn.btn-lg.btn-primary.btn-block(type='submit') Guardar
-  
+
   script
     | const title = document.querySelector('.card-title')
     | const description = document.querySelector('.card-text')
