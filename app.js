@@ -5,6 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cookieSession = require('cookie-session');
+const busboy = require('connect-busboy');
 
 // Load routes
 const index = require('./routes');
@@ -28,6 +29,7 @@ app.use(cookieSession({
   maxAge: 60 * 60 * 1000 // 1 hour
 }))
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(busboy({ immediate: true }));
 
 app.use('/', index);
 app.use('/api', api);
