@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --watch public --watch routes --watch views --watch app.js --watch db/index.js ./bin/www"
+    "start": "nodemon --watch public --watch routes --watch views --watch app.js --watch db/index.js ./bin/www",
+    "test": "mocha ./tests/api.js"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -21,6 +22,10 @@
     "serve-favicon": "~2.4.5"
   },
   "devDependencies": {
-    "nodemon": "^1.14.12"
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1",
+    "nodemon": "^1.14.12",
+    "sinon": "^7.5.0",
+    "supertest": "^4.0.2"
   }
 }

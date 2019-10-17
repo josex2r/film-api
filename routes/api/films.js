@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   const film = req.body;
   const { name, description, image } = film;
-  console.log(req.body)
 
   if (!name || !description || !image) {
       res.sendStatus(400);
