@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon --watch public --watch routes --watch views --watch app.js --watch db/index.js ./bin/www",
-    "test": "mocha ./tests/api.js"
+    "test": "mocha ./tests/*-test.js"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
