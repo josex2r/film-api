@@ -1,3 +1,4 @@
+// https://gist.github.com/the-vampiire/a564af41ed0ce8eb7c30dbe6c0f627d8
 const shapeFlags = flags =>
   flags.reduce((shapedFlags, flag) => {
     const [flagName, rawValue] = flag.split("=");
