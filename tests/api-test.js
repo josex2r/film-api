@@ -16,7 +16,7 @@ const mockFilm = {
   image: 'wow'
 };
 
-describe('API tests', function() {
+describe('API', function() {
   let sandbox;
 
   beforeEach(function() {
@@ -28,33 +28,7 @@ describe('API tests', function() {
     sandbox.restore();
   });
 
-  describe('Login', function() {
-    it('redirects to the login page if login fails', async function() {
-      const response = await request(app)
-        .post('/login')
-        .send({
-          email: 'sponge@bob.com',
-          password: 'garyTheSnail'
-        });
-
-      expect(response.statusCode).to.equal(302);
-      expect(response.header.location).to.be.equal('/?error=true');
-    });
-
-    it('redirects to the films page if login success', async function() {
-      const response = await request(app)
-        .post('/login')
-        .send({
-          email: 'aaaa@aaaa.com',
-          password: 'aaaa'
-        });
-
-      expect(response.statusCode).to.equal(302);
-      expect(response.header.location).to.be.equal('/films');
-    });
-  });
-
-  describe('API GET', function() {
+  context('GET', function() {
     it('responds with all the films', async function() {
       const response = await request(app)
         .get('/api/films')
@@ -84,7 +58,7 @@ describe('API tests', function() {
     });
   });
 
-  describe('API PUT', function() {
+  context('PUT', function() {
     it('responds with 405', async function() {
       return request(app)
         .put('/api/films')
@@ -94,7 +68,7 @@ describe('API tests', function() {
     });
   });
 
-  describe('API POST', function() {
+  context('POST', function() {
     it('adds a film', async function() {
       await request(app)
         .post(`/api/films`)

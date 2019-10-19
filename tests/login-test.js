@@ -49,13 +49,13 @@ describe('Logout', function() {
     expect(cookies.session.value).to.not.be.empty;
   });
 
-  it('redirects to the login page if login fails', async function() {
+  it('redirects to the login page after logout', async function() {
     const response = await authenticatedRequest
       .get('/logout');
     const cookies = extractCookies(response.headers);
 
     expect(cookies.session.value).to.be.empty;
-    expect(response.statusCode).to.equal(302);
+    expect(response.statusCode).to.be.equal(302);
     expect(response.header.location).to.be.equal('/?logout=true');
   });
 });
