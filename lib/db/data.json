@@ -1,0 +1,35 @@
+{
+    "films": [
+        {
+            "description": "El Depredador es una pel\u00edcula perteneciente al g\u00e9nero de ciencia ficci\u00f3n y de acci\u00f3n dirigida por Shane Black y escrita por Black y Fred Dekker. Es la cuarta entrega de la serie de pel\u00edculas Depredador, que tendr\u00e1 lugar entre los acontecimientos de Depredador 2 y Depredadores.",
+            "id": "1",
+            "image": "https://e.rpp-noticias.io/normal/2018/05/10/295129_607694.jpg",
+            "name": "Predator"
+        },
+        {
+            "description": "Tres meses despu\u00e9s de la derrota de S\u00edndrome y saliendo de una carrera en la que Dash particip\u00f3, la familia Parr se ve obligada a asumir sus identidades como s\u00fapers de nuevo con la repentina aparici\u00f3n de un supervillano conocido como 'El Subterr\u00e1neo'.",
+            "id": "2",
+            "image": "https://lumiere-a.akamaihd.net/v1/images/eu_inc-2_showcase_hero_r_25a14533.jpeg?region=0,0,2000,835&width=1200&quality=8",
+            "name": "Los Incre\u00edbles 2"
+        },
+        {
+            "description": "Mary y la flor de la bruja es una pel\u00edcula de animaci\u00f3n japonesa de fantas\u00eda dirigida por Hiromasa Yonebayashi, conocido por sus trabajos en el Studio Ghibli, Arrietty y el mundo de los diminutos y El recuerdo de Marnie. La pel\u00edcula se basa en la novela infantil La peque\u00f1a escoba de palo de Mary Stewart.",
+            "id": "3",
+            "image": "https://ep01.epimg.net/cultura/imagenes/2018/09/05/actualidad/1536141405_899825_1536242058_noticia_normal.jpg",
+            "name": "Mary y la flor de la Bruja"
+        },
+        {
+            "description": "Los dinosaurios de la isla Nublar est\u00e1n en peligro. Un volc\u00e1n en la isla en la que tuvieron lugar los hechos mostrados en Parque Jur\u00e1sico y en Jurassic World ha despertado y amenaza a los dinosaurios que est\u00e1n en la isla. Owen y Claire, junto a un equipo de rescate, viajan hasta all\u00ed para rescatar a los dinosaurios que quedan antes de que la fuerza de la naturaleza los extinga de nuevo.",
+            "id": "4",
+            "image": "https://www.cope.es/blogs/palomitas-de-maiz/wp-content/uploads/sites/6/2018/06/jw-725x353.jpg",
+            "name": "Jurassic World: El reino ca\u00eddo"
+        }
+    ],
+    "users": [
+        {
+            "email": "aaaa@aaaa.com",
+            "isAdmin": true,
+            "password": "aaaa"
+        }
+    ]
+}
