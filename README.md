@@ -15,6 +15,35 @@ npm install
 npm start
 ```
 
+## Pasos a seguir
+
+Cada paso es una rama del repo:
+
+### step-1
+1. Instalar/Configurar `nodemon`
+2. Crear la base de datos (constructor, get, set)
+3. Devolver el listado de películas
+4. Formulario de login + redirección con query param
+
+### step-2
+1. Instalar/Configurar `cookie-session`
+2. Crear la cookie al autenticarse
+3. Crear middleware de redirección
+
+### step-3
+1. Crear parámetro `:film_id`
+2. Añadir el parámetro al router para la vista de detalle
+
+### step-4
+1. Añadir el usuario a la plantilla
+2. Logout
+
+### step-5
+1. Eliminar película
+
+### step-6
+1. Busboy
+
 ## Configuración Google Cloud
 
 Rellena el fichero `.env` con los valores de de tu proyecto de Google Cloud:
